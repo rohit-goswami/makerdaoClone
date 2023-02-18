@@ -139,7 +139,7 @@ contract Dai {
         require(expiry == 0 || now <= expiry, "Dai: Permit-expired");
         require(nonce == nonces[holder]++, "Dai: Invalid nonce");
         uint wad = allowed ? uint(-1) : 0;
-        alllowance[holder][spender] = wad;
+        allowance[holder][spender] = wad;
         emit Approval(holder, spender, wad);
     }
  
